@@ -1,14 +1,14 @@
-function Qcard(){
+function Qcard(props){
     return(
         <main className="card-container">
-         <h3 className="question"> how to one say ggod bye in spanish?</h3>
+         <h3 className="question">How would one say goodbye in Spanish?</h3>
             <div className="answer-container">
-                <p className="answer">advfa</p>
-                <p className="answer">adios</p>
-                <p className="answer">zvvzvz</p>
-                <p className="answer">azvzv</p>
+                <p className="answer">Adiós</p>
+                <p className="answer">Hola</p>
+                <p className="answer">Au Revoir</p>
+                <p className="answer">Salir</p>
             </div>
-            <hr/>
+            <hr className="line"/>
         </main>
     )
 }

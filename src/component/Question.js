@@ -38,7 +38,8 @@ function Question() {
             {questions.length > 0 ? (
                 <Qcard data={questions} />
             ) : (
-                <Start handler={requestQ} />
+                <Qcard data={questions} />
+                /* {/* <Start handler={requestQ} /> */ 
             )}
         </>
     );

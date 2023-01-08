@@ -13,7 +13,7 @@ body {
     background-color: #F5F7FB;
     font-family: 'Karla';
 }
-
+    /* start page */
 .start-container {
     display: grid;
     justify-content: center;
@@ -62,4 +62,24 @@ body {
     left: 0;
     bottom:0;
     transform: translate(-40%,40%);
+}
+
+/* Question page */
+.question{
+
+position: absolute;
+width: 307px;
+height: 19px;
+left: 75px;
+top: 40px;
+
+font-family: 'Karla';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #293264;
 }

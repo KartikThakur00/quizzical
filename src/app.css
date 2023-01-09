@@ -47,6 +47,7 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: #F5F7FB;
+    cursor: pointer;
 }
 
 .blob1 {
@@ -55,6 +56,7 @@ body {
     height: fit-content;
     right: 0;
     top: 0;
+    user-select: none;
     z-index: -1;
     transform: translate(40%, -40%);
 }
@@ -65,23 +67,32 @@ body {
     height: fit-content;
     left: 0;
     bottom: 0;
+    user-select: none;
     z-index: -1;
     transform: translate(-40%, 40%);
 }
 
 /* Question page */
 .card-container {
+    display: flex;
+    flex-direction: column;
     max-width: 70%;
     width: fit-content;
     margin: 0 auto;
     margin-top: 2rem;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .question {
     margin: 0;
     margin-top: 1rem;
+    font-family: "Karla";
     font-size: 1.25rem;
-    font-weight: 700;
     color: #293264;
 }
 
@@ -89,7 +100,7 @@ body {
     display: flex;
     text-align: center;
     justify-content: flex-start;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 10px;
     width: fit-content;
 }
@@ -100,10 +111,11 @@ body {
     width: fit-content;
     height: fit-content;
     padding: 5px 21px;
-    margin: 1rem 0;
+    margin: 0;
     border: 1.75px solid #4D5B9E;
     border-radius: 0.75rem;
     font-size: 0.85rem;
+    cursor: pointer;
 }
 
 .line {
@@ -111,4 +123,19 @@ body {
     margin: 0;
     border: .5px solid #DBDEF0;
     transform: rotate(-0.05deg);
+}
+.check-button{
+    width: fit-content;
+    margin: 0 auto;
+margin-top: 2rem;
+padding: 10px 20px;
+border: none;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+word-wrap: none;
+color: #F5F7FB;
+background: #4D5B9E;
+border-radius: 10px;
+cursor: pointer;
 }

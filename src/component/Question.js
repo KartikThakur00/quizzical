@@ -1,8 +1,8 @@
-import React from "react";
-import Start from "./Start";
-import Qcard from "./Qcard";
-import { nanoid } from "nanoid";
-import { decodeHtml } from "../decodeHtml";
+// import React from "react";
+// import Start from "./Start";
+// import Qcard from "./Qcard";
+// import { nanoid } from "nanoid";
+
 function Question() {
   const [apiQuestions, setApiQuestions] = React.useState([]);
   const [questions, setQuestions] = React.useState([]);
@@ -17,37 +17,39 @@ function Question() {
   // console.log(questions.length);
   console.log(apiQuestions);
 
-  // setting data
-  function requestQ() {
-    setQuestions(
-      apiQuestions.map((Question) => {
-        const answers = Question.incorrect_answers.map(A=>decodeHtml(A))
+//   // setting data
+//   function requestQ() {
+//     setQuestions(
+//       apiQuestions.map((Question) => {
+//         const answers = Question.incorrect_answers.map((A) => (decodeHtml(A)));
 
-        return {
-            id:nanoid(),
-          question: decodeHtml(Question.question),
-          incorrectAnswers: answers,
-          correctAnswer: decodeHtml(Question.correct_answer),
-        };
-      })
-    );
-  }
+//         return {
+//           id: nanoid(),
+//           question: decodeHtml(Question.question),
+//           incorrectAnswers: answers,
+//           correctAnswer: decodeHtml(Question.correct_answer),
+//         };
+//       })
+//     );
+//   }
 
-  const questionCards = questions.map((data) => (
-    <Qcard
-    key={data.id}
-      question={data.question}
-      answers={data.incorrectAnswers}
-      correctAnswer={data.correctAnswer}
-    />
-  ));
+//   const questionCards = questions.map((data) => (
+//     <Qcard
+//       key={data.id}
+//       question={data.question}
+//       answers={data.incorrectAnswers}
+//       correctAnswer={data.correctAnswer}
+//     />
+//   ));
 
-  console.log(questionCards);
+//   console.log(questionCards);
   return (
     <>
       {questions.length > 0 ? (
-        <div className="card-container">{questionCards}
-        <button className="check-button">Check Answers</button></div>
+        <div className="card-container">
+          {questionCards}
+          <button className="check-button">Check Answers</button>
+        </div>
       ) : (
         <Start handler={requestQ} />
       )}

@@ -1,15 +1,21 @@
 function Qcard(props){
-    const answers=[props.correctAnswer,...props.answers]
+    const answer=[props.correctAnswer,...props.answers]
+
+    const isChecked=true
+    const styles={
+        borderColor :isChecked?"#D6DBF5":"",
+        background : isChecked?"#D6DBF5":""
+    }
     console.log(props.question)
+    console.log(answer)
     return(
         <div className="card">
          <h3 className="question">{props.question}</h3>
             <div className="answer-container">
-                <p className="answer">{answers[0]}</p>
-                <p className="answer">{answers[1]}</p>
-                <p className="answer">{answers[2]}</p>
-                <p className="answer">{answers[3]}</p>
-
+                <p className="answer" style={styles}>{answer[0]}</p>
+                <p className="answer" style={styles}>{answer[2]}</p>
+                <p className="answer" style={styles}>{answer[1]}</p>
+                <p className="answer" style={styles}>{answer[3]}</p>
             </div>
             <hr className="line"/>
         </div>

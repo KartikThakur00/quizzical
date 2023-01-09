@@ -55,6 +55,7 @@ body {
     height: fit-content;
     right: 0;
     top: 0;
+    z-index: -1;
     transform: translate(40%, -40%);
 }
 
@@ -64,19 +65,23 @@ body {
     height: fit-content;
     left: 0;
     bottom: 0;
+    z-index: -1;
     transform: translate(-40%, 40%);
 }
 
 /* Question page */
 .card-container {
-    width: 50%;
+    max-width: 70%;
+    width: fit-content;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .question {
     margin: 0;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: #293264;
 }
 
@@ -84,7 +89,9 @@ body {
     display: flex;
     text-align: center;
     justify-content: flex-start;
+    /* flex-wrap: wrap; */
     gap: 10px;
+    width: fit-content;
 }
 
 .answer {
@@ -94,9 +101,9 @@ body {
     height: fit-content;
     padding: 5px 21px;
     margin: 1rem 0;
-    border: 2px solid #4D5B9E;
+    border: 1.75px solid #4D5B9E;
     border-radius: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .line {

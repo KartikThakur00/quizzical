@@ -1,15 +1,16 @@
 function Qcard(props){
     return(
-        <main className="card-container">
-         <h3 className="question">How would one say goodbye in Spanish?</h3>
+        <div>
+         <h3 className="question">{props.question}</h3>
             <div className="answer-container">
-                <p className="answer">Adiós</p>
-                <p className="answer">Hola</p>
-                <p className="answer">Au Revoir</p>
-                <p className="answer">Salir</p>
+                <p className="answer">{props.answers[0]}</p>
+                <p className="answer">{props.answers[1]}</p>
+                <p className="answer">{props.answers[2]}</p>
+                <p className="answer">{props.answers[3]}</p>
+
             </div>
             <hr className="line"/>
-        </main>
+        </div>
     )
 }
 export default Qcard

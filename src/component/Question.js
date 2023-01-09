@@ -32,14 +32,22 @@ function Question() {
             })
         );
     }
-    // console.log(questions)
+
+    const questionCards= questions.map(data=>
+        <Qcard question={data.question}
+            answers={data.answers}
+            correctAnswer={data.correctAnswer}
+        />
+    )
+
+    console.log(questionCards)
     return (
         <>
             {questions.length > 0 ? (
-                <Qcard data={questions} />
+             <div  className="card-container">{questionCards}</div>
             ) : (
-                <Qcard data={questions} />
-                /* {/* <Start handler={requestQ} /> */ 
+
+                <Start handler={requestQ} />
             )}
         </>
     );

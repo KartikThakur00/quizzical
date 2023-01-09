@@ -73,13 +73,13 @@ body {
 }
 
 /* Question page */
-.card-container {
+.quiz{
     display: flex;
     flex-direction: column;
     max-width: 70%;
     width: fit-content;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .card {
@@ -124,7 +124,7 @@ body {
     border: .5px solid #DBDEF0;
     transform: rotate(-0.05deg);
 }
-.check-button{
+.btn{
     width: fit-content;
     margin: 0 auto;
 margin-top: 2rem;

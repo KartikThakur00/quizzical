@@ -18,7 +18,6 @@ export default function Question(){
     fetch("https://opentdb.com/api.php?amount=5&type=multiple")
       .then((res) => res.json())
       .then((data) => setQuizQuestions(generateQuiz(data.results)));
-    // .then(data=>console.log(data))
   }, [newGame]);
 
   function toggleStatus() {
@@ -87,7 +86,7 @@ export default function Question(){
   }
 
   function handleAnswerCheck(questionId, answerId) {
-    setQuizQuestions((oldQuizQuestions) =>
+   !gameOver? setQuizQuestions((oldQuizQuestions) =>
       oldQuizQuestions.map((oldQuizQuestion) => {
         return oldQuizQuestion.id === questionId
           ? {
@@ -103,7 +102,7 @@ export default function Question(){
             }
           : oldQuizQuestion;
       })
-    );
+    ):(setQuizQuestions(prevquestion=>prevquestion))
   }
 
   function checkAnswers() {
@@ -166,7 +165,7 @@ export default function Question(){
           <div className="quiz-container">
             {Questions}
            <div className="bottom-container"> {gameOver ? (
-              <h2>you got {score}/5 correct!</h2>
+              <h2 className="score-msg">you got {score}/5 correct!</h2>
                 ) :("")}
               <div className="button-container">
                 <button className="btn" onClick={handleClick}>

@@ -128,7 +128,6 @@ body {
 .btn {
     width: fit-content;
     margin: 0 auto;
-    margin-top: 1.5rem;
     padding: 10px 20px;
     border: none;
     font-family: 'Inter';
@@ -144,6 +143,22 @@ body {
 .bottom-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 5rem;
+    margin: 1rem auto;
+}
+@media (width<700px){
+    .quiz{
+        max-width: 80%;
+    }
+    .question{
+        font-size: 1.1rem;
+    }
+    .answer{
+        font-size: 0.7rem;
+    }
+    .score-msg{
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }

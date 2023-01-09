@@ -63,7 +63,7 @@ export default function Question(){
       if (props.isCorrect) {
         return "#94D7A2";
       } else if (props.isChecked && !props.isCorrect) {
-        return "#D6DBF5";
+        return "#F8BCBC";
       }
     }
 
@@ -75,6 +75,9 @@ export default function Question(){
           backgroundColor: props.gameOver
             ? styleGameOver()
             : styleBeforeGameOver,
+            borderColor:props.gameOver
+            ? styleGameOver()
+            : styleBeforeGameOver ,
         }}
         className="answer"
       >
@@ -127,8 +130,7 @@ export default function Question(){
 
   const Questions = quizQuestions.map((question) => {
     return (
-      <div className="card">
-        {/* <Question key={question.id} question={question.question} /> */}
+      <div className="card" key={nanoid()}>
         <h3 className="question" key={question.id}>{question.question}</h3>
         <div className="answer-container">
           {question.answers.map((answer) => {
@@ -152,8 +154,8 @@ export default function Question(){
     );
   });
 
-  console.log(quizQuestions);
-  console.log(Questions);
+//   console.log(quizQuestions);
+//   console.log(Questions);
 
   return (
     <>
@@ -163,15 +165,14 @@ export default function Question(){
         <div className="quiz">
           <div className="quiz-container">
             {Questions}
-            {gameOver ? (
+           <div className="bottom-container"> {gameOver ? (
               <h2>you got {score}/5 correct!</h2>
-            ) :("")}
-
-
+                ) :("")}
               <div className="button-container">
                 <button className="btn" onClick={handleClick}>
                   {!gameOver ? "Check Answer" : "Play Again"}
                 </button>
+              </div>
               </div>
           </div>
         </div>

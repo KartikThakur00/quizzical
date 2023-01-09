@@ -73,7 +73,7 @@ body {
 }
 
 /* Question page */
-.quiz{
+.quiz {
     display: flex;
     flex-direction: column;
     max-width: 70%;
@@ -124,18 +124,26 @@ body {
     border: .5px solid #DBDEF0;
     transform: rotate(-0.05deg);
 }
-.btn{
+
+.btn {
     width: fit-content;
     margin: 0 auto;
-margin-top: 2rem;
-padding: 10px 20px;
-border: none;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-word-wrap: none;
-color: #F5F7FB;
-background: #4D5B9E;
-border-radius: 10px;
-cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    word-wrap: none;
+    color: #F5F7FB;
+    background: #4D5B9E;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
 }

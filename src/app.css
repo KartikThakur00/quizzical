@@ -12,6 +12,7 @@ body {
     margin: 0;
     background-color: #F5F7FB;
     font-family: 'Karla';
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* start page */
@@ -155,7 +156,7 @@ body {
         font-size: 1.1rem;
     }
     .answer{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     .score-msg{
         font-size: 1rem;
